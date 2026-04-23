@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caso demo | Optimizacion de inventario</title>
+  <link rel="stylesheet" href="portfolio_case.css">
+</head>
+<body>
+  <main class="page">
+    <nav><a href="index.html">Volver al portafolio</a><a href="../app/inventario/index.html">Abrir demo interactiva</a></nav>
+    <header class="hero">
+      <div>
+        <span class="eyebrow">Caso demo 01</span>
+        <h1>Optimizacion de inventario para una PYME comercial</h1>
+        <p>Ejemplo de entregable para una empresa con faltantes en productos de alta rotacion y exceso en articulos lentos.</p>
+      </div>
+      <div class="scorecard">
+        <div><span>Compra sugerida</span><strong>$3,420</strong></div>
+        <div><span>Capital en exceso</span><strong>$2,180</strong></div>
+        <div><span>Riesgo quiebre</span><strong>6 SKUs</strong></div>
+        <div><span>Margen muestra</span><strong>42%</strong></div>
+      </div>
+    </header>
+
+    <section class="two">
+      <article class="card">
+        <h2>Problema mostrado</h2>
+        <p>La empresa compra de forma reactiva. Algunos productos A se quedan sin stock antes de la siguiente reposicion, mientras que productos C acumulan mas de 120 dias de cobertura.</p>
+      </article>
+      <article class="card">
+        <h2>Entregable visible</h2>
+        <p>Un tablero que clasifica productos por impacto, calcula punto de reorden, estima compra sugerida y separa acciones en comprar, vigilar, mantener o liquidar.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Muestra de recomendaciones</h2>
+      <table>
+        <thead>
+          <tr><th>SKU</th><th>Producto</th><th>Hallazgo</th><th>Indicador</th><th>Accion</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>TEC-001</td><td>Cable USB-C 1m</td><td>Alta venta e inventario bajo</td><td>12 dias cobertura</td><td><span class="tag red">Comprar</span></td></tr>
+          <tr><td>FER-002</td><td>Disco corte metal 4.5</td><td>Producto A bajo reorden</td><td>80 unidades faltantes</td><td><span class="tag red">Reponer</span></td></tr>
+          <tr><td>FAR-002</td><td>Mascarilla caja 50</td><td>Venta lenta con stock alto</td><td>145 dias cobertura</td><td><span class="tag blue">Liquidar</span></td></tr>
+          <tr><td>FER-003</td><td>Pintura blanca 1 galon</td><td>Producto A estable</td><td>39 dias cobertura</td><td><span class="tag green">Mantener</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="artifact">
+      <h2>Como se ve el resultado</h2>
+      <div class="mock-dashboard">
+        <div class="mock-kpi"><span>SKUs analizados</span><strong>15</strong></div>
+        <div class="mock-kpi"><span>Comprar ahora</span><strong>5</strong></div>
+        <div class="mock-kpi"><span>Vigilar</span><strong>3</strong></div>
+        <div class="mock-kpi"><span>Exceso</span><strong>2</strong></div>
+      </div>
+      <p>Este caso se complementa con la herramienta local en `app/inventario/index.html`, donde el prospecto puede ver el calculo aplicado a datos de ejemplo o a un CSV propio.</p>
+    </section>
+  </main>
+</body>
+</html>
+

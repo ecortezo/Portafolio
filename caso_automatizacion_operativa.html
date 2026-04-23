@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caso demo | Automatizacion operativa</title>
+  <link rel="stylesheet" href="portfolio_case.css">
+</head>
+<body>
+  <main class="page">
+    <nav><a href="index.html">Volver al portafolio</a></nav>
+    <header class="hero">
+      <div>
+        <span class="eyebrow">Caso demo 03</span>
+        <h1>Automatizacion operativa sin ERP nuevo</h1>
+        <p>Ejemplo para negocios que manejan ventas, compras e inventario con archivos manuales y necesitan reportes consistentes.</p>
+      </div>
+      <div class="scorecard">
+        <div><span>Ahorro semanal</span><strong>6 h</strong></div>
+        <div><span>Errores manuales</span><strong>-70%</strong></div>
+        <div><span>Reportes</span><strong>1 clic</strong></div>
+        <div><span>Alertas</span><strong>Diarias</strong></div>
+      </div>
+    </header>
+
+    <section class="two">
+      <article class="card">
+        <h2>Problema mostrado</h2>
+        <p>El equipo copia datos entre archivos, revisa productos uno por uno y detecta problemas tarde. El proceso depende de una persona y no deja trazabilidad.</p>
+      </article>
+      <article class="card">
+        <h2>Entregable visible</h2>
+        <p>Un flujo simple que consolida archivos, valida errores, genera alertas y produce un reporte semanal de excepciones.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Mapa del flujo automatizado</h2>
+      <div class="flow">
+        <div>CSV de ventas</div>
+        <div>Inventario actual</div>
+        <div>Validacion</div>
+        <div>Alertas</div>
+        <div>Reporte semanal</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Reporte de excepciones</h2>
+      <table>
+        <thead>
+          <tr><th>Tipo</th><th>Ejemplo</th><th>Regla</th><th>Salida</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Faltante</td><td>Producto A bajo punto de reorden</td><td>Stock menor a reorden</td><td><span class="tag red">Tarea compra</span></td></tr>
+          <tr><td>Dato invalido</td><td>Costo vacio</td><td>Campo requerido faltante</td><td><span class="tag gold">Corregir archivo</span></td></tr>
+          <tr><td>Exceso</td><td>Producto con 120+ dias cobertura</td><td>Cobertura alta</td><td><span class="tag blue">Revisar liquidacion</span></td></tr>
+          <tr><td>Normal</td><td>Producto con cobertura sana</td><td>Dentro de rango</td><td><span class="tag green">Sin accion</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
+
