@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Caso demo | Pronostico y reposicion</title>
+  <title>Caso de trabajo | Pronostico y reposicion</title>
   <link rel="stylesheet" href="portfolio_case.css">
 </head>
 <body>
@@ -11,40 +11,40 @@
     <nav><a href="index.html">Volver al portafolio</a></nav>
     <header class="hero">
       <div>
-        <span class="eyebrow">Caso demo 02</span>
-        <h1>Modelo simple de pronostico y reposicion</h1>
-        <p>Ejemplo para negocios que necesitan anticipar demanda, planificar compras y reducir urgencias de proveedor.</p>
+        <span class="eyebrow">Caso de trabajo 02 | Datos anonimizados</span>
+        <h1>Implementacion de ciclo S&amp;OP en distribuidora con 4.500 SKUs</h1>
+        <p>Proyecto sobre una distribuidora regional con tres canales de venta y decisiones de compra concentradas en criterio comercial no estructurado. El objetivo fue convertir visibilidad parcial en una rutina de pronostico y reposicion usable por el equipo.</p>
       </div>
       <div class="scorecard">
-        <div><span>Precision base</span><strong>82%</strong></div>
-        <div><span>SKUs criticos</span><strong>12</strong></div>
-        <div><span>Cobertura objetivo</span><strong>35 dias</strong></div>
-        <div><span>Revision</span><strong>Semanal</strong></div>
+        <div><span>Error de pronostico</span><strong>38% -> 17%</strong></div>
+        <div><span>SKUs ajustados</span><strong>1.200</strong></div>
+        <div><span>Quiebres temporada alta</span><strong>-52%</strong></div>
+        <div><span>Proceso</span><strong>S&amp;OP activo</strong></div>
       </div>
     </header>
 
     <section class="two">
       <article class="card">
-        <h2>Problema mostrado</h2>
-        <p>Las compras se hacen mirando el inventario actual, pero sin considerar velocidad de venta, lead time ni variabilidad de demanda.</p>
+        <h2>Contexto del caso</h2>
+        <p>La compra dependia de experiencia, stock visible y urgencia del momento. El resultado era el tipico desbalance: quiebres en temporada alta, sobrecompra en temporada baja y poca trazabilidad entre demanda, suministro y finanzas.</p>
       </article>
       <article class="card">
-        <h2>Entregable visible</h2>
-        <p>Una matriz de reposicion semanal con demanda esperada, cobertura proyectada y sugerencia de compra por producto o categoria.</p>
+        <h2>Salida entregada</h2>
+        <p>Modelo de pronostico por canal, parametros de seguridad y reorden por segmento, agenda mensual de S&amp;OP y protocolo de escalamiento para decisiones de excepcion.</p>
       </article>
     </section>
 
     <section>
-      <h2>Matriz de reposicion semanal</h2>
+      <h2>Componentes implementados</h2>
       <table>
         <thead>
-          <tr><th>Categoria</th><th>Demanda semanal</th><th>Stock actual</th><th>Cobertura</th><th>Decision</th></tr>
+          <tr><th>Componente</th><th>Aplicacion</th><th>Impacto</th></tr>
         </thead>
         <tbody>
-          <tr><td>Consumibles</td><td>238 unidades</td><td>180</td><td>5 dias</td><td><span class="tag red">Compra urgente</span></td></tr>
-          <tr><td>Herramientas</td><td>45 unidades</td><td>120</td><td>19 dias</td><td><span class="tag gold">Vigilar</span></td></tr>
-          <tr><td>Accesorios</td><td>402 unidades</td><td>680</td><td>12 dias</td><td><span class="tag red">Reponer A</span></td></tr>
-          <tr><td>Pinturas</td><td>80 galones</td><td>210</td><td>18 dias</td><td><span class="tag green">Mantener</span></td></tr>
+          <tr><td>Pronostico por canal</td><td>Suavizamiento exponencial con ajuste estacional</td><td><span class="tag green">MAPE reducido</span></td></tr>
+          <tr><td>Politica de inventario</td><td>Seguridad y reorden segun variabilidad y lead time</td><td><span class="tag gold">Reposicion consistente</span></td></tr>
+          <tr><td>Ritmo de gobierno</td><td>Agenda, revision y escalamiento mensual</td><td><span class="tag blue">Decision interareas</span></td></tr>
+          <tr><td>Transferencia</td><td>Uso autonomo por equipo interno</td><td><span class="tag red">Menor dependencia</span></td></tr>
         </tbody>
       </table>
     </section>
@@ -54,15 +54,14 @@
       <div class="comparison">
         <div class="card">
           <h3>Antes</h3>
-          <p>Compra reactiva, urgencias frecuentes, decisiones por memoria y poca visibilidad de cobertura.</p>
+          <p>Compras guiadas por percepcion comercial, inventario visible y urgencia operativa. Sin una lectura ordenada de demanda, cobertura y riesgo.</p>
         </div>
         <div class="card">
           <h3>Despues</h3>
-          <p>Revision semanal por excepciones: comprar productos bajo cobertura objetivo y pausar productos con exceso.</p>
+          <p>Revision mensual con demanda por canal, parametros por segmento y decisiones trazables entre comercial, operaciones y finanzas.</p>
         </div>
       </div>
     </section>
   </main>
 </body>
 </html>
-

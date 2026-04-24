@@ -3,63 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Caso demo | Optimizacion de inventario</title>
+  <title>Caso de trabajo | Optimizacion de inventario</title>
   <link rel="stylesheet" href="portfolio_case.css">
 </head>
 <body>
   <main class="page">
-    <nav><a href="index.html">Volver al portafolio</a><a href="../app/inventario/index.html">Abrir demo interactiva</a></nav>
+    <nav><a href="index.html">Volver al portafolio</a><a href="demo_inventario.html">Ver herramienta complementaria</a></nav>
     <header class="hero">
       <div>
-        <span class="eyebrow">Caso demo 01</span>
-        <h1>Optimizacion de inventario para una PYME comercial</h1>
-        <p>Ejemplo de entregable para una empresa con faltantes en productos de alta rotacion y exceso en articulos lentos.</p>
+        <span class="eyebrow">Caso de trabajo 01 | Datos anonimizados</span>
+        <h1>Reduccion de sobrestock y ordenamiento de compra en retail nacional</h1>
+        <p>Intervencion sobre una operacion con 18 categorias, 2 almacenes centrales y mas de 12.000 SKUs activos. El problema combinaba exceso de inventario, compra reactiva y baja visibilidad sobre cobertura real.</p>
       </div>
       <div class="scorecard">
-        <div><span>Compra sugerida</span><strong>$3,420</strong></div>
-        <div><span>Capital en exceso</span><strong>$2,180</strong></div>
-        <div><span>Riesgo quiebre</span><strong>6 SKUs</strong></div>
-        <div><span>Margen muestra</span><strong>42%</strong></div>
+        <div><span>Cobertura promedio</span><strong>94 -> 61 dias</strong></div>
+        <div><span>Presion sobre capital</span><strong>-35%</strong></div>
+        <div><span>SKUs criticos</span><strong>-68%</strong></div>
+        <div><span>Urgencias</span><strong>-40%</strong></div>
       </div>
     </header>
 
     <section class="two">
       <article class="card">
-        <h2>Problema mostrado</h2>
-        <p>La empresa compra de forma reactiva. Algunos productos A se quedan sin stock antes de la siguiente reposicion, mientras que productos C acumulan mas de 120 dias de cobertura.</p>
+        <h2>Contexto del caso</h2>
+        <p>Una porcion relevante del inventario superaba 120 dias de cobertura mientras categorias de alta rotacion se quedaban sin stock. El negocio tenia datos disponibles, pero no parametros de planificacion consistentes para priorizar compras, liquidaciones y reposicion.</p>
       </article>
       <article class="card">
-        <h2>Entregable visible</h2>
-        <p>Un tablero que clasifica productos por impacto, calcula punto de reorden, estima compra sugerida y separa acciones en comprar, vigilar, mantener o liquidar.</p>
+        <h2>Salida entregada</h2>
+        <p>Diagnostico cuantificado, clasificacion ABC/XYZ, recalibracion de puntos de reorden, identificacion de SKUs con exceso y modelo de sugerido de compra transferido al equipo interno.</p>
       </article>
     </section>
 
     <section>
-      <h2>Muestra de recomendaciones</h2>
+      <h2>Metodologia aplicada</h2>
       <table>
         <thead>
-          <tr><th>SKU</th><th>Producto</th><th>Hallazgo</th><th>Indicador</th><th>Accion</th></tr>
+          <tr><th>Fase</th><th>Duracion</th><th>Trabajo realizado</th><th>Salida</th></tr>
         </thead>
         <tbody>
-          <tr><td>TEC-001</td><td>Cable USB-C 1m</td><td>Alta venta e inventario bajo</td><td>12 dias cobertura</td><td><span class="tag red">Comprar</span></td></tr>
-          <tr><td>FER-002</td><td>Disco corte metal 4.5</td><td>Producto A bajo reorden</td><td>80 unidades faltantes</td><td><span class="tag red">Reponer</span></td></tr>
-          <tr><td>FAR-002</td><td>Mascarilla caja 50</td><td>Venta lenta con stock alto</td><td>145 dias cobertura</td><td><span class="tag blue">Liquidar</span></td></tr>
-          <tr><td>FER-003</td><td>Pintura blanca 1 galon</td><td>Producto A estable</td><td>39 dias cobertura</td><td><span class="tag green">Mantener</span></td></tr>
+          <tr><td>Diagnostico inicial</td><td>2 semanas</td><td>Lectura de historico, cobertura y rotacion por segmento</td><td><span class="tag red">Mapa del problema</span></td></tr>
+          <tr><td>Modelado</td><td>2 semanas</td><td>Calibracion de reorden y stock de seguridad por categoria</td><td><span class="tag gold">Parametros por SKU</span></td></tr>
+          <tr><td>Liquidacion</td><td>1 semana</td><td>Priorizacion de SKUs con exceso y baja probabilidad de recuperacion</td><td><span class="tag blue">Plan de salida</span></td></tr>
+          <tr><td>Transferencia</td><td>1 semana</td><td>Presentacion a gerencia y protocolo de uso para el equipo</td><td><span class="tag green">Rutina de decision</span></td></tr>
         </tbody>
       </table>
     </section>
 
     <section class="artifact">
-      <h2>Como se ve el resultado</h2>
+      <h2>Resultado visible</h2>
       <div class="mock-dashboard">
-        <div class="mock-kpi"><span>SKUs analizados</span><strong>15</strong></div>
-        <div class="mock-kpi"><span>Comprar ahora</span><strong>5</strong></div>
-        <div class="mock-kpi"><span>Vigilar</span><strong>3</strong></div>
-        <div class="mock-kpi"><span>Exceso</span><strong>2</strong></div>
+        <div class="mock-kpi"><span>Catalogo con exceso</span><strong>34% -> 11%</strong></div>
+        <div class="mock-kpi"><span>Capital inmovilizado</span><strong>Presion reducida</strong></div>
+        <div class="mock-kpi"><span>Ciclo de compra</span><strong>De reactivo a modelado</strong></div>
+        <div class="mock-kpi"><span>Decision semanal</span><strong>Con criterio y prioridades</strong></div>
       </div>
-      <p>Este caso se complementa con la herramienta local en `app/inventario/index.html`, donde el prospecto puede ver el calculo aplicado a datos de ejemplo o a un CSV propio.</p>
+      <p>La herramienta interactiva enlazada en este caso funciona como apoyo comercial para mostrar la logica del modelo. El caso, sin embargo, responde a una intervencion real con datos anonimizados y resultados verificables en conversacion directa.</p>
     </section>
   </main>
 </body>
 </html>
-
