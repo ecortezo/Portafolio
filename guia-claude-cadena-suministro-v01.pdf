@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursos — Eduardo Cortez Ortega · S&amp;OP e Inventarios</title>
+<meta name="description" content="Guías y herramientas gratuitas de S&OP, planificación de inventarios y analítica para supply chain en Bolivia y LATAM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#1F3D5C;
+    --azul-claro:#3E6A96;
+    --texto:#2B2B2B;
+    --gris:#6B6B6B;
+    --linea:#C9CFD6;
+    --fondo-caja:#F4F6F8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',Arial,sans-serif;color:var(--texto);background:#fff;line-height:1.55}
+  .banda{height:10px;background:var(--azul)}
+  .contenedor{max-width:760px;margin:0 auto;padding:0 24px}
+  header{padding:56px 0 40px;border-bottom:1px solid var(--linea)}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gris)}
+  h1{font-size:34px;font-weight:700;color:var(--azul);margin:10px 0 6px;line-height:1.2}
+  header p{color:var(--gris);max-width:56ch}
+  main{padding:44px 0 64px}
+  .recurso{border:1px solid var(--linea);border-left:4px solid var(--azul);border-radius:4px;padding:26px 28px;margin-bottom:24px}
+  .recurso .tipo{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--azul-claro)}
+  .recurso h2{font-size:22px;color:var(--azul);margin:8px 0 10px;line-height:1.25}
+  .recurso p{margin-bottom:14px}
+  .recurso ul{margin:0 0 18px 20px;color:var(--texto)}
+  .recurso li{margin-bottom:5px}
+  .meta{font-size:14px;color:var(--gris);margin-bottom:18px}
+  .boton{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;font-weight:600;padding:12px 26px;border-radius:3px}
+  .boton:hover{background:var(--azul-claro)}
+  .boton:focus-visible{outline:3px solid var(--azul-claro);outline-offset:2px}
+  footer{border-top:1px solid var(--linea);padding:28px 0 40px;font-size:14px;color:var(--gris)}
+  footer strong{color:var(--texto)}
+  footer a{color:var(--azul)}
+  @media (max-width:560px){h1{font-size:27px}.recurso{padding:20px}}
+</style>
+</head>
+<body>
+<div class="banda"></div>
+<div class="contenedor">
+
+<header>
+  <span class="eyebrow">Recursos gratuitos</span>
+  <h1>S&amp;OP, inventarios y analítica para supply chain</h1>
+  <p>Guías y herramientas construidas desde la operación real: 40.000 SKUs activos, 3 almacenes regionales, Bolivia y LATAM. Sin registro.</p>
+</header>
+
+<main>
+
+  <article class="recurso">
+    <span class="tipo">Guía PDF · 16 páginas</span>
+    <h2>Claude aplicado a la gestión de cadena de suministro</h2>
+    <p>Qué delegar a la IA, qué verificar y cómo adoptar sin equivocar la secuencia. Verificada contra documentación oficial de Anthropic, edición junio de 2026.</p>
+    <ul>
+      <li>Casos de uso en las 6 funciones, con prompts listos para copiar</li>
+      <li>Matriz de qué herramienta usar para cada tarea</li>
+      <li>Integración con el ERP vía MCP: NetSuite y SAP</li>
+      <li>Gobernanza de datos y marco de adopción en 3 niveles</li>
+    </ul>
+    <div class="meta">Versión 01 · junio 2026 · español</div>
+    <a class="boton" href="guia-claude-cadena-suministro-v01.pdf" download>Descargar la guía (PDF)</a>
+  </article>
+
+  <!-- Plantilla para próximos recursos: duplicar el bloque <article> anterior -->
+
+</main>
+
+<footer>
+  <p><strong>Eduardo Cortez Ortega</strong> — Especialista en S&amp;OP y planificación de inventarios. Consultoría en Bolivia y LATAM.</p>
+  <p>Contacto y contenido: <a href="https://www.linkedin.com/" rel="me">LinkedIn</a></p>
+</footer>
+
+</div>
+</body>
+</html>
