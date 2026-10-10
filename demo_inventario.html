@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Demo de inventario | Portafolio</title>
+  <title>Demo de inventario | Eduardo Cortez Ortega</title>
   <style>
     :root {
       --ink: #17202a;
@@ -84,8 +84,8 @@
   <header>
     <div class="wrap topbar">
       <div>
-        <h1>Demo de optimizacion de inventario</h1>
-        <p class="subtitle">Ejemplo interactivo integrado en el portafolio para mostrar como se toman decisiones de compra.</p>
+        <h1>Demo de optimización de inventario</h1>
+        <p class="subtitle">Ejemplo interactivo integrado en el portafolio para mostrar cómo se toman decisiones de compra.</p>
       </div>
       <nav>
         <a href="index.html">Volver al portafolio</a>
@@ -96,11 +96,11 @@
   <main class="wrap">
     <section class="toolbar">
       <div class="panel controls" aria-label="Parametros">
-        <label>Dias de ventas<input id="periodDays" type="number" min="7" max="365" value="90"></label>
+        <label>Días de ventas<input id="periodDays" type="number" min="7" max="365" value="90"></label>
         <label>Nivel de servicio<select id="serviceLevel"><option value="1.28">90%</option><option value="1.65" selected>95%</option><option value="2.05">98%</option></select></label>
         <label>ABC A hasta<input id="abcA" type="number" min="40" max="90" value="80"></label>
         <label>ABC B hasta<input id="abcB" type="number" min="70" max="98" value="95"></label>
-        <label>Filtro de accion<select id="actionFilter"><option value="all">Todas</option><option value="Comprar">Comprar</option><option value="Vigilar">Vigilar</option><option value="OK">OK</option><option value="Exceso">Exceso</option></select></label>
+        <label>Filtro de acción<select id="actionFilter"><option value="all">Todas</option><option value="Comprar">Comprar</option><option value="Vigilar">Vigilar</option><option value="OK">OK</option><option value="Exceso">Exceso</option></select></label>
       </div>
       <div class="panel actions">
         <label class="file-button secondary" for="csvInput">Subir CSV</label>
@@ -144,29 +144,30 @@
     </section>
   </main>
   <script>
-    const sampleCsv = `sku,producto,categoria,ventas_90d,costo_unitario,precio_unitario,inventario_actual,lead_time_dias,variabilidad_demanda,pedido_minimo
-FER-001,Taladro 650W,Herramientas,180,38,62,24,18,0.35,6
-FER-002,Disco corte metal 4.5,Consumibles,950,0.85,1.5,80,10,0.25,100
-FER-003,Pintura blanca 1 galon,Pinturas,320,12,21,140,14,0.3,24
-FER-004,Cerradura principal,Seguridad,75,11,19,12,21,0.45,12
-FER-005,Guante nitrilo caja,Seguridad,420,4.8,8.2,30,12,0.4,20
-REP-001,Filtro aceite compacto,Repuestos,510,3.2,6.4,42,15,0.32,24
-REP-002,Bateria 12V 45Ah,Repuestos,62,47,78,18,30,0.5,4
-REP-003,Bujia estandar,Repuestos,680,1.1,2.4,300,20,0.28,80
-TEC-001,Cable USB-C 1m,Accesorios,1200,1.6,4.5,90,12,0.38,100
-TEC-002,Cargador rapido 20W,Accesorios,410,5.5,12,25,18,0.42,30
-TEC-003,Audifono bluetooth,Accesorios,96,9,18,110,25,0.55,20
-FAR-001,Alcohol gel 500ml,Cuidado personal,760,1.9,3.7,55,9,0.3,60
-FAR-002,Mascarilla caja 50,Cuidado personal,130,2.4,5,210,14,0.6,50
-ALI-001,Aceite vegetal 1L,Alimentos,880,1.7,2.65,65,7,0.22,120
-ALI-002,Atun lata 170g,Alimentos,640,0.95,1.65,400,10,0.2,100`;
+    const sampleCsv = `sku;producto;categoria;ventas_90d;costo_unitario;precio_unitario;inventario_actual;lead_time_dias;variabilidad_demanda;pedido_minimo
+FER-001;Taladro 650W;Herramientas;180;38;62;24;18;0.35;6
+FER-002;Disco corte metal 4.5;Consumibles;950;0.85;1.5;80;10;0.25;100
+FER-003;Pintura blanca 1 galón;Pinturas;320;12;21;140;14;0.3;24
+FER-004;Cerradura principal;Seguridad;75;11;19;12;21;0.45;12
+FER-005;Guante nitrilo caja;Seguridad;420;4.8;8.2;30;12;0.4;20
+REP-001;Filtro aceite compacto;Repuestos;510;3.2;6.4;42;15;0.32;24
+REP-002;Batería 12V 45Ah;Repuestos;62;47;78;18;30;0.5;4
+REP-003;Bujía estándar;Repuestos;680;1.1;2.4;300;20;0.28;80
+TEC-001;Cable USB-C 1m;Accesorios;1200;1.6;4.5;90;12;0.38;100
+TEC-002;Cargador rápido 20W;Accesorios;410;5.5;12;25;18;0.42;30
+TEC-003;Audífono bluetooth;Accesorios;96;9;18;110;25;0.55;20
+FAR-001;Alcohol gel 500ml;Cuidado personal;760;1.9;3.7;55;9;0.3;60
+FAR-002;Mascarilla caja 50;Cuidado personal;130;2.4;5;210;14;0.6;50
+ALI-001;Aceite vegetal 1L;Alimentos;880;1.7;2.65;65;7;0.22;120
+ALI-002;Atún lata 170g;Alimentos;640;0.95;1.65;400;10;0.2;100`;
     let rawRows = [];
     let analyzedRows = [];
-    const money = value => new Intl.NumberFormat('es-BO', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(value || 0);
+    const money = value => 'Bs. ' + new Intl.NumberFormat('es-BO', { maximumFractionDigits: 0 }).format(value || 0);
     const num = value => new Intl.NumberFormat('es-BO', { maximumFractionDigits: 1 }).format(value || 0);
     const pct = value => `${Math.round((value || 0) * 100)}%`;
-    function splitCsvLine(line) { const cells = []; let current = ''; let quoted = false; for (let i = 0; i < line.length; i++) { const char = line[i]; if (char === '"') { quoted = !quoted; } else if (char === ',' && !quoted) { cells.push(current); current = ''; } else { current += char; } } cells.push(current); return cells.map(cell => cell.trim().replace(/^"|"$/g, '')); }
-    function parseCsv(text) { const lines = text.trim().split(/\r?\n/).filter(Boolean); const headers = splitCsvLine(lines.shift()).map(h => h.trim()); return lines.map(line => { const values = splitCsvLine(line); return headers.reduce((row, header, index) => { row[header] = values[index] ?? ''; return row; }, {}); }); }
+    function splitCsvLine(line, sep) { const cells = []; let current = ''; let quoted = false; for (let i = 0; i < line.length; i++) { const char = line[i]; if (char === '"') { quoted = !quoted; } else if (char === sep && !quoted) { cells.push(current); current = ''; } else { current += char; } } cells.push(current); return cells.map(cell => cell.trim().replace(/^"|"$/g, '')); }
+    function detectSeparator(text) { const first = text.split(/\r?\n/)[0] || ''; return first.includes(';') ? ';' : ','; }
+    function parseCsv(text) { const sep = detectSeparator(text); const lines = text.trim().split(/\r?\n/).filter(Boolean); const headers = splitCsvLine(lines.shift(), sep).map(h => h.trim()); return lines.map(line => { const values = splitCsvLine(line, sep); return headers.reduce((row, header, index) => { row[header] = values[index] ?? ''; return row; }, {}); }); }
     function toNumber(value) { const parsed = Number(String(value ?? '').replace(',', '.')); return Number.isFinite(parsed) ? parsed : 0; }
     function analyze() {
       const periodDays = Math.max(1, toNumber(document.getElementById('periodDays').value));
@@ -205,7 +206,7 @@ ALI-002,Atun lata 170g,Alimentos,640,0.95,1.65,400,10,0.2,100`;
     function exportCsv() {
       if (!analyzedRows.length) return;
       const headers = ['sku','producto','categoria','abc','demanda_diaria','inventario_actual','punto_reorden','compra_sugerida','cobertura_dias','margen','accion'];
-      const lines = [headers.join(',')].concat(analyzedRows.map(row => [row.sku, row.producto, row.categoria, row.abc, row.dailyDemand.toFixed(2), row.stock, row.reorderPoint.toFixed(2), row.suggestedBuy, row.coverageDays.toFixed(1), row.margin.toFixed(2), row.action].map(value => `"${String(value).replaceAll('"', '""')}"`).join(',')));
+      const lines = [headers.join(';')].concat(analyzedRows.map(row => [row.sku, row.producto, row.categoria, row.abc, row.dailyDemand.toFixed(2), row.stock, row.reorderPoint.toFixed(2), row.suggestedBuy, row.coverageDays.toFixed(1), row.margin.toFixed(2), row.action].map(value => `"${String(value).replaceAll('"', '""')}"`).join(';')));
       const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8' });
       const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = 'recomendaciones_inventario.csv'; link.click(); URL.revokeObjectURL(link.href);
     }
