@@ -164,6 +164,18 @@ tr:last-child td { border-bottom: 0; }
   padding: 14px;
   font-weight: 900;
 }
+.scorecard div:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+.autor {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.autor p {
+  margin: 0;
+  font-size: 14px;
+}
 @media (max-width: 820px) {
   .hero,
   .two,
