@@ -14,9 +14,12 @@
   <meta property="og:url" content="https://cadenasuministro.com/caso_automatizacion_operativa.html">
   <meta property="og:image" content="https://cadenasuministro.com/assets/eduardo-cortez.jpg">
   <meta name="author" content="Eduardo Cortez Ortega">
-  <link rel="stylesheet" href="portfolio_case.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sci.css">
 </head>
-<body>
+<body class="pg-caso">
   <main class="page">
     <nav><a href="index.html">Volver al portafolio</a></nav>
     <header class="hero">
@@ -62,10 +65,10 @@
           <tr><th>Situación</th><th>Lectura</th><th>Respuesta esperada</th></tr>
         </thead>
         <tbody>
-          <tr><td>Stock bajo reorden</td><td>Riesgo de quiebre</td><td><span class="tag red">Escalar compra</span></td></tr>
-          <tr><td>Dato incompleto</td><td>Base no confiable</td><td><span class="tag gold">Corregir origen</span></td></tr>
-          <tr><td>Cobertura excesiva</td><td>Capital inmovilizado</td><td><span class="tag blue">Revisar salida</span></td></tr>
-          <tr><td>Operación en rango</td><td>Sin excepción</td><td><span class="tag green">Monitoreo normal</span></td></tr>
+          <tr><td>Stock bajo reorden</td><td>Riesgo de quiebre</td><td><span class="tag estado-critico">Escalar compra</span></td></tr>
+          <tr><td>Dato incompleto</td><td>Base no confiable</td><td><span class="tag estado-vigilar">Corregir origen</span></td></tr>
+          <tr><td>Cobertura excesiva</td><td>Capital inmovilizado</td><td><span class="tag estado-exceso">Revisar salida</span></td></tr>
+          <tr><td>Operación en rango</td><td>Sin excepción</td><td><span class="tag estado-sano">Monitoreo normal</span></td></tr>
         </tbody>
       </table>
     </section>
